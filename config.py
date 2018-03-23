@@ -5,11 +5,16 @@
 # Purpose :
 # Creation Date : 09-12-2017
 # Last Modified : Fri 19 Jan 2018 01:11:28 PM CST
-# Created By : Jeasine Ma [jeasinema[at]gmail[dot]com]
+# Created By : ls /Jeasine Ma [jeasinema[at]gmail[dot]com]
 
 
 """VoxelNet config system.
 """
+
+## Conda activate tf3
+
+## If cannot find numpy:
+## export CFLAGS="-I /home/rzhu/.conda/envs/tf/lib/python3.6/site-packages/numpy/core/include $CFLAGS"
 
 import os
 import os.path as osp
@@ -24,7 +29,7 @@ __C = edict()
 cfg = __C
 
 # for gpu allocation
-__C.GPU_AVAILABLE = '3,1,2,0'
+__C.GPU_AVAILABLE = '0'
 __C.GPU_USE_COUNT = len(__C.GPU_AVAILABLE.split(','))
 __C.GPU_MEMORY_FRACTION = 1
 
